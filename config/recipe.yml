@@ -26,6 +26,9 @@ modules:
     install:
       # - micro
       # - starship
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-just-perfection
+      - gnome-shell-extension-caffeine
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
