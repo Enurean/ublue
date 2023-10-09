@@ -7,5 +7,6 @@ set -oue pipefail
 
 # Your code goes here.
 echo 'Enable broadcom wifi chip'
-rm /etc/modprobe.d/broadcom-wl-blacklist.conf
-rm /etc/modprobe.d/default-disable-broadcom-wl.conf
+rpm-ostree install /tmp/rpms/kmods/*wl*.rpm
+# rm /etc/modprobe.d/broadcom-wl-blacklist.conf
+# rm /etc/modprobe.d/default-disable-broadcom-wl.conf

@@ -30,9 +30,9 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 # AKMODS
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms
-RUN find /tmp/rpms
+# RUN find /tmp/rpms
 # RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
-RUN rpm-ostree install /tmp/rpms/kmods/*wl*.rpm
+# RUN rpm-ostree install /tmp/rpms/kmods/*wl*.rpm
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
