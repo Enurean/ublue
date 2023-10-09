@@ -41,7 +41,7 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-terminal
       - gnome-terminal-nautilus
-      - gnome-extensions-app
+      # - gnome-extensions
       - htop
       - nvtop
 
