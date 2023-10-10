@@ -7,4 +7,4 @@ set -oue pipefail
 
 # Override default packages
 echo 'Install mutter patches'
-sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched gnome-shell mutter xorg-x11-server-Xwayland
+sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched gnome-shell mutter
