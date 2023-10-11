@@ -5,7 +5,7 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Your code goes here.
+# Enable broadcom wifi chip
 echo 'Enable broadcom wifi chip'
 rpm-ostree install /tmp/rpms/kmods/*wl*.rpm
 rm /usr/etc/modprobe.d/broadcom-wl-blacklist.conf
