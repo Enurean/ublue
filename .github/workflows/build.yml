@@ -41,7 +41,6 @@ jobs:
         recipe:
           - recipe.yml
           - recipe-mac.yml
-          - recipe-38.yml
 # !!!
 
     steps:
