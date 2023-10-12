@@ -31,6 +31,9 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 # Copy akmods repo
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms
 
+# yafti
+RUN pip install --prefix=/usr yafti
+
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
 COPY config /tmp/config/
