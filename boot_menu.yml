@@ -3,3 +3,7 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: ublue
+    - label: ublue-os/ublue-main
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: ublue-main
