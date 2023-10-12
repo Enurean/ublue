@@ -29,7 +29,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 # Copy akmods repo
-COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms
+# COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
