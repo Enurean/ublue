@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-main-mac
+name: ublue-mac38
 # description will be included in the image's metadata
 description: Custom Universal Blue Image
 
