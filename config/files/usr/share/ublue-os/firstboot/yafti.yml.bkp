@@ -21,18 +21,18 @@ screens:
         - run: flatpak remote-delete --system --force fedora
         - run: flatpak remote-delete --user --force fedora
         - run: flatpak remove --system --noninteractive --all
-        # - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-  # check-system-flathub:
-  #   source: yafti.screen.consent
-  #   values:
-  #     title: Missing Flathub Repository (System)
-  #     condition:
-  #       run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
-  #     description: |
-  #       We have detected that you don't have Flathub's repository on your system. We will now add that repository to your system-wide list.
-  #     actions:
-  #       - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+  check-system-flathub:
+    source: yafti.screen.consent
+    values:
+      title: Missing Flathub Repository (System)
+      condition:
+        run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
+      description: |
+        We have detected that you don't have Flathub's repository on your system. We will now add that repository to your system-wide list.
+      actions:
+        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
   check-user-flathub:
     source: yafti.screen.consent
     values:
@@ -50,8 +50,8 @@ screens:
       show_terminal: true
       package_manager: yafti.plugin.flatpak
       package_manager_defaults:
-        user: true
-        system: false
+        user: false
+        system: true
       groups:
         Core GNOME Apps:
           description: Core system applications for the GNOME desktop environment.
@@ -117,15 +117,15 @@ screens:
             - Slack: com.slack.Slack
             - Standard Notes: org.standardnotes.standardnotes
             - Thunderbird Email: org.mozilla.Thunderbird
-        # Streaming:
-        #   description: Stream to the Internet.
-        #   default: false
-        #   packages:
-        #     - OBS Studio: com.obsproject.Studio
-        #     - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
-        #     - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
-        #     - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
-        #     - Boatswain for Streamdeck: com.feaneron.Boatswain
+        Streaming:
+          description: Stream to the Internet.
+          default: false
+          packages:
+            - OBS Studio: com.obsproject.Studio
+            - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
+            - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
+            - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
+            - Boatswain for Streamdeck: com.feaneron.Boatswain
 
   final-screen:
     source: yafti.screen.title
