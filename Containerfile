@@ -44,5 +44,5 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
-    sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched gnome-shell mutter mutter-common xorg-x11-server-Xwayland && \
+    sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched mutter mutter-common && \
     rm -rf /tmp/* /var/* && ostree container commit
