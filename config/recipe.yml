@@ -37,10 +37,6 @@ modules:
       - hl2linux-selinux
       - system76-scheduler
       - morewaita-icon-theme
-      # - gnome-shell
-      # - mutter
-      # - mutter-common
-      # - xorg-x11-server-Xwayland
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
