@@ -80,6 +80,7 @@ modules:
       - Shortwave: de.haeckerfelix.Shortwave
       - Clapper: com.github.rafostar.Clapper
       - Parabolic: org.nickvision.tubeconverter
+      - Mousai: io.github.seadve.Mousai
       - Secrets: org.gnome.World.Secrets
       - Visual Studio Code: com.visualstudio.code
       - Black Box: com.raggesilver.BlackBox
