@@ -75,6 +75,19 @@ modules:
     custom-flatpaks: # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
+      - Codecs: org.freedesktop.Platform.ffmpeg-full//22.08
+      - Shortwave: de.haeckerfelix.Shortwave
+      - Clapper: com.github.rafostar.Clapper
+      - Parabolic: org.nickvision.tubeconverter
+      - Secrets: org.gnome.World.Secrets
+      - Visual Studio Code: com.visualstudio.code
+      - Black Box: com.raggesilver.BlackBox
+      - Resources: net.nokyan.Resources
+      - Mission Center: io.missioncenter.MissionCenter
+      - SaveDesktop: io.github.vikdevelop.SaveDesktop
+      - Pika Backup: org.gnome.World.PikaBackup
+      - Metadata Cleaner: fr.romainvigier.MetadataCleaner
+      
 
   - type: script
     scripts:
