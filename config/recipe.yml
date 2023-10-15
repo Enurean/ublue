@@ -33,6 +33,7 @@ modules:
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-just-perfection
       - gnome-shell-extension-caffeine
+      - gnome-shell-extension-blur-my-shell
       - gnome-console
       - hl2linux-selinux
       - system76-scheduler
