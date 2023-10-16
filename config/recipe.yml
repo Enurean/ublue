@@ -86,7 +86,7 @@ modules:
       - Visual Studio Code: com.visualstudio.code
       - Black Box: com.raggesilver.BlackBox
       - Resources: net.nokyan.Resources
-      - Mission Center: io.missioncenter.MissionCenter
+      # - Mission Center: io.missioncenter.MissionCenter
       - SaveDesktop: io.github.vikdevelop.SaveDesktop
       - Pika Backup: org.gnome.World.PikaBackup
       - Metadata Cleaner: fr.romainvigier.MetadataCleaner
