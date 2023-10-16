@@ -89,6 +89,7 @@ modules:
       - Pika Backup: org.gnome.World.PikaBackup
       - Metadata Cleaner: fr.romainvigier.MetadataCleaner
       - Dropbox: com.dropbox.Client
+      - Cryptomator: org.cryptomator.Cryptomator
       
 
   - type: script
