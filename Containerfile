@@ -28,6 +28,9 @@ COPY cosign.pub /usr/share/ublue-os/cosign.pub
 COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
+# Copy VSCode repo
+COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
+
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
 COPY config /tmp/config/
