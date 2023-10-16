@@ -29,7 +29,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 # Copy repos
-COPY etc/yum.repos.d/ etc/yum.repos.d/
+COPY files/etc/yum.repos.d/ etc/yum.repos.d/
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
