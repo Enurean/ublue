@@ -56,7 +56,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
     sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched mutter mutter-common && \
     # Copy ublue-update config
-    cp tmp/ublue-update.toml /usr/etc/ublue-update/ublue-update.toml && \
+    cp tmp/ublue-update.toml /etc/ublue-update/ublue-update.toml && \
     # Remove repos after using them
     rm -rf /etc/yum.repos.d/* && \
     rm -rf /tmp/* /var/* && ostree container commit
