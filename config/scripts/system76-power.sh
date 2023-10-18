@@ -9,4 +9,3 @@ set -oue pipefail
 echo 'Configure system76-power service'
 
 systemctl enable com.system76.PowerDaemon.service system76-power-wake
-# system76-power graphics integrated
