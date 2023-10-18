@@ -34,7 +34,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
 COPY config/files/usr/etc/ublue-update/ublue-update.toml tmp/ublue-update.toml
 RUN rpm-ostree override remove ublue-os-update-services && rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
-COPY tmp/ublue-update.toml etc/ublue-update/ublue-update.toml
+COPY tmp/ublue-update.toml etc/ublue-update/
 
 # Copy VSCode repo
 COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
