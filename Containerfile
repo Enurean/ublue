@@ -32,7 +32,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 # COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
 # RUN rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
 COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
-COPY usr/etc/ublue-update/ublue-update.toml /tmp/ublue-update.toml
+COPY /usr/etc/ublue-update/ublue-update.toml /tmp/ublue-update.toml
 RUN rpm-ostree override remove ublue-os-update-services && rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
 
 # Copy VSCode repo
@@ -56,7 +56,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
     sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched mutter mutter-common && \
     # Copy ublue-update config
-    cp tmp/ublue-update.toml /etc/ublue-update/ublue-update.toml && \
+    cp /tmp/ublue-update.toml /usr/etc/ublue-update/ublue-update.toml && \
     # Remove repos after using them
     rm -rf /etc/yum.repos.d/* && \
     rm -rf /tmp/* /var/* && ostree container commit
