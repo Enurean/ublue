@@ -28,9 +28,11 @@ COPY cosign.pub /usr/share/ublue-os/cosign.pub
 COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
-# Copy ublue-update repo
+# Copy ublue-update repo and toml
+# COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
+# RUN rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
 COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
-RUN rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
+RUN rpm-ostree override remove ublue-os-update-services && rpm-ostree install /tmp/rpms/ublue-update.noarch.rpm
 
 # Copy VSCode repo
 COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
