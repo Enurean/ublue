@@ -11,3 +11,11 @@ ublue_variants:
     flavors:
       - label: ublue
         info: Ublue
+
+
+ublue_variants:
+  - label: ublue-os/ublue-wl
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: ublue-wl
+        info: Ublue
