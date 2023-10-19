@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-mac
+name: ublue-wl
 # description will be included in the image's metadata
 description: Custom Universal Blue Image
 
@@ -55,7 +55,7 @@ modules:
                   # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       # - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
+      - ublue-update # https://github.com/ublue-os/ublue-update
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
 
