@@ -32,7 +32,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms/39
 RUN find /tmp/rpms
 # RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
-RUN rpm-ostree install /tmp/rpms/39/kmods/kmod-wl*.rpm
+# RUN rpm-ostree install /tmp/rpms/39/kmods/kmod-wl*.rpm
 
 # Copy VSCode repo
 COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
@@ -53,7 +53,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
-    sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched mutter mutter-common && \
+    # sudo rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:trixieua:mutter-patched mutter mutter-common && \
     # Remove repos after using them
     rm -rf /etc/yum.repos.d/* && \
     rm -rf /tmp/* /var/* && ostree container commit
