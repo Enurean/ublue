@@ -40,7 +40,7 @@ modules:
       - system76-power
       - morewaita-icon-theme
       - code
-      - kmod-wl
+      # - broadcom-wl
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -97,4 +97,5 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       # - broadcom.sh
+      - broadcom-wl.sh
       - system76-power.sh
