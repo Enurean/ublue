@@ -29,7 +29,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 # Copy the akmods from ublue-os/akmods into tmp, to be installed later by the akmods module
-COPY --from=ghcr.io/ublue-os/akmods:TAG /rpms/ /tmp/rpms
+COPY --from=ghcr.io/ublue-os/akmods:39 /rpms/ /tmp/rpms
 # RUN find /tmp/rpms
 RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
 # RUN rpm-ostree install /tmp/rpms/kmods/kmod-v4l2loopback*.rpm
