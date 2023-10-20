@@ -41,7 +41,7 @@ jobs:
         recipe:
           - recipe.yml
           - recipe-wl.yml
-          - recipe-wl-beta
+          - recipe-wl-beta.yml
 # !!!
 
     steps:
