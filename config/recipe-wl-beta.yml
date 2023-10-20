@@ -1,0 +1,100 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ublue-wl-beta
+# description will be included in the image's metadata
+description: Custom Universal Blue Image
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - usr: /usr # copy static configurations
+                  #
+                  # copies config/files/usr into your image's /usr
+                  #
+                  # configuration you wish to end up in /etc/ on the booted system
+                  # should be added into /usr/etc/ as that is the proper "distro"
+                  # config directory on ostree. Read more in the files module's README
+
+  - type: rpm-ostree
+    repos:
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/repo/fedora-%OS_VERSION%/kylegospo-hl2linux-selinux-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/trixieua/mutter-patched/repo/fedora-%OS_VERSION%/trixieua-mutter-patched-fedora-%OS_VERSION%.repo
+    install:
+      # - micro
+      # - starship
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-just-perfection
+      - gnome-shell-extension-caffeine
+      - gnome-console
+      - hl2linux-selinux
+      - system76-scheduler
+      - system76-power
+      - morewaita-icon-theme
+      - code
+      - kmod-wl
+    remove:
+      - firefox # default firefox removed in favor of flatpak
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - gnome-terminal
+      - gnome-terminal-nautilus
+      - htop
+      - nvtop
+
+  - type: bling # configure what to pull in from ublue-os/bling
+    install:
+      - justfiles # add "!include /usr/share/ublue-os/just/bling.just"
+                  # in your custom.just (added by default) or local justfile
+      - nix-installer # shell shortcuts for determinate system's nix installers
+      # - ublue-os-wallpapers
+      - ublue-update # https://github.com/ublue-os/ublue-update
+      # - dconf-update-service # a service unit that updates the dconf db on boot
+      # - devpod # https://devpod.sh/ as an rpm
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+
+
+  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
+                #  will be installed and set up
+    custom-flatpaks: # this section is optional
+      - Codecs: org.freedesktop.Platform.ffmpeg-full//22.08
+      - Shortwave: de.haeckerfelix.Shortwave
+      - Clapper: com.github.rafostar.Clapper
+      - Parabolic: org.nickvision.tubeconverter
+      - Mousai: io.github.seadve.Mousai
+      - Secrets: org.gnome.World.Secrets
+      - Visual Studio Code: com.visualstudio.code
+      - Black Box: com.raggesilver.BlackBox
+      - Resources: net.nokyan.Resources
+      - SaveDesktop: io.github.vikdevelop.SaveDesktop
+      - Pika Backup: org.gnome.World.PikaBackup
+      - Metadata Cleaner: fr.romainvigier.MetadataCleaner
+      - Dropbox: com.dropbox.Client
+      - Cryptomator: org.cryptomator.Cryptomator
+      
+
+  - type: script
+    scripts:
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh
+      - broadcom.sh
+      - system76-power.sh
