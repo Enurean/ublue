@@ -13,14 +13,14 @@ export AKMODS_DIRECTORY="/tmp/akmods"
 
 cd "/tmp/modules/akmods/installers"
 
-# Make every bling installer executable
+# Make every akmods installer executable
 find "$PWD" -type f -exec chmod +x {} \;
 
 for ITEM in "${INSTALL[@]}"; do
-    echo "Pulling from bling: $ITEM"
+    echo "Pulling from akmods: $ITEM"
     # The trainling newline from $ITEM is removed
     eval "$PWD/${ITEM%$'\n'}.sh"
 done
 
-# Remove bling COPR
+# Remove akmods COPR
 rm /etc/yum.repos.d/akmods*.repo
