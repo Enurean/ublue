@@ -9,4 +9,4 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: ublue-wl
-      - label: ublue-wl-beta
+      # - label: ublue-wl-beta
