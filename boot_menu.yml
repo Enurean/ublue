@@ -1,29 +1,12 @@
-# ublue_variants:
-#   - label: ublue-os/ublue
-#     ks: /kickstart/ublue-os.ks
-#     flavors:
-#       - label: ublue
-#         info: Ublue
-
 ublue_variants:
   - label: ublue-os/ublue
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
       - label: ublue
-        info: Ublue
-
 
 ublue_variants:
   - label: ublue-os/ublue-wl
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: ublue-wl
-        info: Ublue
-
-
-ublue_variants:
-  - label: ublue-os/ublue-wl-beta
-    ks: /kickstart/ublue-os.ks
-    flavors:
       - label: ublue-wl-beta
-        info: Ublue
