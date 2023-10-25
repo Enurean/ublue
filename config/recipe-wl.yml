@@ -42,11 +42,13 @@ modules:
       - code
       - kmod-wl
       - tlp
+      - tlp-rdw
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-terminal
       - gnome-terminal-nautilus
+      - power-profiles-daemon
       - htop
       - nvtop
 
@@ -98,4 +100,4 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       - broadcom.sh
-      - system76-power.sh
+      # - system76-power.sh
