@@ -47,6 +47,7 @@ modules:
       - gnome-terminal
       - gnome-terminal-nautilus
       - gnome-tour
+      - gnome-system-monitor
       - htop
       - nvtop
 
