@@ -36,13 +36,13 @@ modules:
       - gnome-shell-extension-caffeine
       - gnome-console
       - hl2linux-selinux
-      # - system76-scheduler
-      # - system76-power
+      - system76-scheduler
+      - system76-power
       - morewaita-icon-theme
       - code
       - kmod-wl
-      - tlp
-      - tlp-rdw
+      # - tlp
+      # - tlp-rdw
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -100,4 +100,5 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       - broadcom.sh
-      # - system76-power.sh
+      - system76-power.sh
+      # - tlp
