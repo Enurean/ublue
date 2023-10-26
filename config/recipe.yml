@@ -37,6 +37,7 @@ modules:
       - gnome-console
       - hl2linux-selinux
       - system76-scheduler
+      - gnome-shell-extension-system76-scheduler
       - morewaita-icon-theme
       - code
       - nautilus-python
@@ -96,3 +97,4 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - system76-scheduler.sh
