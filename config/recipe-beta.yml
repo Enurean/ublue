@@ -79,19 +79,19 @@ modules:
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
                 #  will be installed and set up
     custom-flatpaks: # this section is optional
-      - Codecs: org.freedesktop.Platform.ffmpeg-full//22.08
+      - Codecs: org.freedesktop.Platform.ffmpeg-full
       - Shortwave: de.haeckerfelix.Shortwave
       - Clapper: com.github.rafostar.Clapper
       - Parabolic: org.nickvision.tubeconverter
       - Mousai: io.github.seadve.Mousai
       - Secrets: org.gnome.World.Secrets
-      - Visual Studio Code: com.visualstudio.code
+      # - Visual Studio Code: com.visualstudio.code
       - Black Box: com.raggesilver.BlackBox
       - Resources: net.nokyan.Resources
       - SaveDesktop: io.github.vikdevelop.SaveDesktop
       - Pika Backup: org.gnome.World.PikaBackup
       - Metadata Cleaner: fr.romainvigier.MetadataCleaner
-      - Dropbox: com.dropbox.Client
+      # - Dropbox: com.dropbox.Client
       - Cryptomator: org.cryptomator.Cryptomator
       
 
