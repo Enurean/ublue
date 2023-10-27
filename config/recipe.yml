@@ -49,7 +49,7 @@ modules:
       - gnome-terminal-nautilus
       - gnome-tour
       - gnome-system-monitor
-      - gnome-extension-app
+      - gnome-extensions-app
       - htop
       - nvtop
 
