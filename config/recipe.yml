@@ -41,6 +41,7 @@ modules:
       - morewaita-icon-theme
       - code
       - nautilus-python
+      - nautilus-dropbox
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -84,13 +85,13 @@ modules:
       - Parabolic: org.nickvision.tubeconverter
       - Mousai: io.github.seadve.Mousai
       - Secrets: org.gnome.World.Secrets
-      - Visual Studio Code: com.visualstudio.code
+      # - Visual Studio Code: com.visualstudio.code
       - Black Box: com.raggesilver.BlackBox
       - Resources: net.nokyan.Resources
       - SaveDesktop: io.github.vikdevelop.SaveDesktop
       - Pika Backup: org.gnome.World.PikaBackup
       - Metadata Cleaner: fr.romainvigier.MetadataCleaner
-      - Dropbox: com.dropbox.Client
+      # - Dropbox: com.dropbox.Client
       - Cryptomator: org.cryptomator.Cryptomator
       
 
