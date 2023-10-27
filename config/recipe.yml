@@ -49,7 +49,6 @@ modules:
       - gnome-terminal-nautilus
       - gnome-tour
       - gnome-system-monitor
-      # - gnome-extensions-app
       - gnome-software-rpm-ostree
       - htop
       - nvtop
@@ -102,3 +101,4 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       - system76-scheduler.sh
+      - finish-install.sh
