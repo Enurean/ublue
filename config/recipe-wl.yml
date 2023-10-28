@@ -39,6 +39,8 @@ modules:
       - system76-scheduler
       - gnome-shell-extension-system76-scheduler
       - system76-power
+      - system76-dkms
+      - system76-acpi-dkms
       - morewaita-icon-theme
       - nautilus-python
       - nautilus-dropbox
