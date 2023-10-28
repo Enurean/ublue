@@ -1,9 +1,9 @@
 ublue_variants:
   - label: enurean/ublue-main
     ks: /kickstart/ublue-os-nvidia.ks
-    # flavors:
-    #   - label: ublue-main
+    flavors:
+      - label: ublue-main
   - label: enurean/ublue-wl
     ks: /kickstart/ublue-os.ks
-    # flavors:
-    #   - label: ublue-wl
+    flavors:
+      - label: ublue-wl
