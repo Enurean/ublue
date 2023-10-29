@@ -1,13 +1,8 @@
 ublue_variants:
   - label: enurean/ublue
-    # ks: /kickstart/ublue-os-nvidia.ks
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: ublue-main
         info: Nvidia Legacy Drivers Included
       - label: ublue-wl
         info: Broadcom Drivers Included
-  # - label: enurean/ublue-wl
-  #   ks: /kickstart/ublue-os.ks
-  #   flavors:
-  #     - label: ublue-wl
