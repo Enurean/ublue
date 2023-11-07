@@ -72,9 +72,9 @@ modules:
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
 
-  - type: akmods
-    install:
-      - kmod-wl
+  # - type: akmods
+  #   install:
+  #     - kmod-wl
 
   - type: fonts
     fonts:
