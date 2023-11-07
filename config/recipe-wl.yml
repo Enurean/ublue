@@ -5,7 +5,7 @@ description: Custom Universal Blue Image
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -72,6 +72,10 @@ modules:
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
 
+  # - type: akmods
+  #   install:
+  #     - kmod-wl
+
   - type: fonts
     fonts:
       nerd-fonts:
@@ -109,7 +113,7 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      - broadcom.sh
+      - broadcom-wl.sh
       - system76-power.sh
       - system76-scheduler.sh
       - finish-install.sh

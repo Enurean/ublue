@@ -23,7 +23,7 @@
     # - nautilus-python
     # - nautilus-dropbox
     # - code
-    - kmod-wl
+    # - kmod-wl
     # - tlp
     # - tlp-rdw
   remove:
