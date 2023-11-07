@@ -3,7 +3,7 @@
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     # - https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/repo/fedora-%OS_VERSION%/kylegospo-hl2linux-selinux-fedora-%OS_VERSION%.repo
     # - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
+    # - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
     # - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
     # - https://copr.fedorainfracloud.org/coprs/trixieua/mutter-patched/repo/fedora-%OS_VERSION%/trixieua-mutter-patched-fedora-%OS_VERSION%.repo
   install:
@@ -16,9 +16,9 @@
     # - hl2linux-selinux
     # - system76-scheduler
     # - gnome-shell-extension-system76-scheduler
-    - system76-power
-    - system76-dkms
-    - system76-acpi-dkms
+    # - system76-power
+    # - system76-dkms
+    # - system76-acpi-dkms
     # - morewaita-icon-theme
     # - nautilus-python
     # - nautilus-dropbox
@@ -34,6 +34,6 @@
     # - gnome-tour
     # - gnome-system-monitor
     # - gnome-software-rpm-ostree
-    - power-profiles-daemon
+    # - power-profiles-daemon
     # - htop
     # - nvtop
