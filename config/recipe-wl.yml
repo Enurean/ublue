@@ -71,10 +71,7 @@ modules:
       - ublue-update # https://github.com/ublue-os/ublue-update
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
-
-  # - type: akmods
-  #   install:
-  #     - kmod-wl
+      - laptop # tlp
 
   - type: fonts
     fonts:
@@ -114,6 +111,6 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       - broadcom-wl.sh
-      - system76-power.sh
+      # - system76-power.sh
       - system76-scheduler.sh
       - finish-install.sh
