@@ -7,5 +7,5 @@ set -oue pipefail
 
 # Enable broadcom wifi chip
 echo 'Enable broadcom wifi chip'
-rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
+# rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
 rpm-ostree install /tmp/rpms/kmods/kmod-wl*.rpm
