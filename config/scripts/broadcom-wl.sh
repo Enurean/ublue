@@ -7,4 +7,5 @@ set -oue pipefail
 
 # Enable broadcom wifi chip
 echo 'Enable broadcom wifi chip'
-rpm-ostree install /tmp/rpms/39/kmods/kmod-wl*.rpm
+rpm-ostree install /tmp/akmods/rpms/kmod-wl*.rpm
+# rpm-ostree install /tmp/rpms/39/kmods/kmod-wl*.rpm
