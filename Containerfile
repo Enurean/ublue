@@ -37,7 +37,7 @@ COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
-# COPY config /tmp/config/
+COPY config /tmp/config/
 
 # Copy modules
 # The default modules are inside ublue-os/bling
