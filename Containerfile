@@ -9,7 +9,7 @@
 # does nothing if the image is built in the cloud.
 
 # !! Warning: changing these might not do anything for you. Read comment above.
-ARG IMAGE_MAJOR_VERSION=38
+ARG IMAGE_MAJOR_VERSION=39
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
@@ -31,8 +31,6 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 # Copy the akmods from ublue-os/akmods into tmp, to be installed later by the akmods module
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/ /tmp/rpms
 RUN find /tmp/rpms
-# RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm
-# RUN rpm-ostree install /tmp/rpms/kmods/kmod-wl*.rpm
 
 # Copy VSCode repo
 COPY config/files/etc/yum.repos.d/vscode.repo etc/yum.repos.d/vscode.repo
