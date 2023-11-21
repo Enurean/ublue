@@ -48,7 +48,6 @@ modules:
         - Roboto
         - Open Sans
 
-
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
                 #  will be installed and set up
     custom-flatpaks: # this section is optional
@@ -58,7 +57,6 @@ modules:
       - Parabolic: org.nickvision.tubeconverter
       - Mousai: io.github.seadve.Mousai
       - Secrets: org.gnome.World.Secrets
-      - Black Box: com.raggesilver.BlackBox
       - Resources: net.nokyan.Resources
       - SaveDesktop: io.github.vikdevelop.SaveDesktop
       - Pika Backup: org.gnome.World.PikaBackup
