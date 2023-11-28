@@ -12,6 +12,7 @@
     - gnome-shell-extension-just-perfection
     - gnome-shell-extension-caffeine
     - gnome-shell-extension-blur-my-shell
+    - gnome-shell-extension-user-theme
     - gnome-console
     - hl2linux-selinux
     - system76-scheduler
@@ -20,6 +21,8 @@
     - code
     - nautilus-python
     - nautilus-dropbox
+    - yaru-theme
+    - gnome-shell-theme-flat-remix
   remove:
     - firefox # default firefox removed in favor of flatpak
     - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
