@@ -44,9 +44,9 @@ modules:
         - Terminus
         - JetBrainsMono
         - NerdFontsSymbolsOnly
-      google-fonts:
-        - Roboto
-        - Open Sans
+      # google-fonts:
+      #   - Roboto
+      #   - Open Sans
 
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
                 #  will be installed and set up
