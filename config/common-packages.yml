@@ -7,6 +7,7 @@
     - https://copr.fedorainfracloud.org/coprs/trixieua/mutter-patched/repo/fedora-%OS_VERSION%/trixieua-mutter-patched-fedora-%OS_VERSION%.repo
   install:
     # - micro
+    - podman-compose
     - starship
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-just-perfection
